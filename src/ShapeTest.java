@@ -21,7 +21,7 @@ public class ShapeTest
 	public void SquareTest()
 	{
 		Shape sqr = new Square("Square1", 3.0);
-		Assert.assertEquals("Square area incorrect.", 9.0, sqr.getArea(), 0.0001);
+		Assert.assertEquals("Square area incorrect.", 9.0, sqr.getPerimeter(), 0.0001);
 		Assert.assertEquals("Square perimeter incorrect.", 12.0, sqr.getPerimeter(), 0.0001);
 		Assert.assertEquals("Square type incorrect.", "Square", sqr.getShapeType());
 		Assert.assertEquals("Shape ID incorrect.", "Square1", sqr.getId());
@@ -61,7 +61,7 @@ public class ShapeTest
 	public void EllipseTest()
 	{
 		Shape circ = new Ellipse("Ellipse1", 3.0, 3.0);
-		Assert.assertEquals("Ellipse area incorrect.", Math.PI*3.0*3.0, circ.getArea(),0.0001);
+		Assert.assertEquals("Ellipse area incorrect.", Math.PI*3.0*3.0, circ.getPerimeter(),0.0001);
 		Assert.assertEquals("Ellipse perimeter incorrect.",
 				2 * Math.PI * Math.sqrt((Math.pow(3, 2) + Math.pow(3, 2)) / 2),
 				circ.getPerimeter(),0.0001);
@@ -69,7 +69,7 @@ public class ShapeTest
 		Assert.assertEquals("Shape ID incorrect.", "Ellipse1", circ.getId());
 
 		Shape circs = new Ellipse("Ellipse2", 5.0, 3.0);
-		Assert.assertEquals("Ellipse area incorrect.", Math.PI*3*5, circs.getArea(),0.0001);
+		Assert.assertEquals("Ellipse area incorrect.", Math.PI*3*5, circs.getPerimeter(),0.0001);
 		Assert.assertEquals("Ellipse perimeter incorrect.",
 				2 * Math.PI * Math.sqrt((Math.pow(5.0, 2) + Math.pow(3.0, 2)) / 2),
 				circs.getPerimeter(),0.0001);

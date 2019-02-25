@@ -32,7 +32,7 @@ public class EquilateralTriangle extends Polygon
 	 * @return The area of the triangle (b*h/2 = sidelength*sidelength*root(3)/4)
 	 */
 	@Override
-	public double getArea()
+	public double getPerimeter()
 	{
 		// TODO: complete this...
 		

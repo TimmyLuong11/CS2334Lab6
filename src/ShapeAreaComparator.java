@@ -34,11 +34,11 @@ public class ShapeAreaComparator implements Comparator<Shape>
 	{
 		// TODO: complete this...
 		int result = 0;
-		if(s1.getArea() > s2.getArea())
+		if(s1.getPerimeter() > s2.getPerimeter())
 		{
 			result = -1;
 		}
-		else if(s1.getArea() < s2.getArea())
+		else if(s1.getPerimeter() < s2.getPerimeter())
 		{
 			result = 1;
 		}

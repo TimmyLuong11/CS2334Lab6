@@ -39,7 +39,7 @@ public class Trapezoid extends Polygon
 	 * @return Area of the trapezoid.
 	 */
 	@Override
-	public double getArea()
+	public double getPerimeter()
 	{
 		// Use shorter variables names for sake of simplicty:
 		double a = this.bottomBase;

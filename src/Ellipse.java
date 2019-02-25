@@ -61,7 +61,7 @@ public class Ellipse extends Shape
 	 * @return The area of the ellipse: pi * major_axis * minor_axis
 	 */
 	@Override
-	public double getArea()
+	public double getPerimeter()
 	{
 		return Math.PI * majorAxis * minorAxis;
 	}
