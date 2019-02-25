@@ -20,9 +20,9 @@ public class ShapeSorterTest
 	{
 		ShapeSorter sorter = new ShapeSorter();
 
-		Shape a = new Rectangle("test", 3, 3);
+		Shape a = new Trapezoid("test", 3, 3, 3, 3);
 		Shape b = new EquilateralTriangle("test2", 4);
-		Shape c = new Square("test3", 3);
+		Shape c = new Ellipse("test3", 3, 6);
 		Shape d = new Circle("test4", 1.5);
 
 		sorter.addShape(a);
@@ -43,6 +43,19 @@ public class ShapeSorterTest
 	public void SortShapesDefaultTest()
 	{
 		// TODO: complete this...
+		ShapeSorter sorter = new ShapeSorter();
+
+		Shape a = new Trapezoid("test", 3, 3, 3, 3);
+		Shape b = new EquilateralTriangle("test2", 4);
+		Shape c = new Ellipse("test3", 3, 6);
+		Shape d = new Circle("test4", 1.5);
+
+		sorter.sortShapes();
+
+		Assert.assertEquals(a, sorter.shapes.get(0));
+		Assert.assertEquals(b, sorter.shapes.get(1));
+		Assert.assertEquals(c, sorter.shapes.get(2));
+		Assert.assertEquals(d, sorter.shapes.get(3));
 	}
 
 	/**
@@ -52,6 +65,19 @@ public class ShapeSorterTest
 	public void SortShapesAreaTest()
 	{
 		// TODO: complete this...
+		ShapeSorter sorter = new ShapeSorter();
+
+		Shape a = new Trapezoid("test", 3, 3, 3, 3);
+		Shape b = new EquilateralTriangle("test2", 4);
+		Shape c = new Ellipse("test3", 3, 6);
+		Shape d = new Circle("test4", 1.5);
+
+		sorter.sortShapes(new ShapeAreaComparator());
+
+		Assert.assertEquals(a, sorter.shapes.get(0));
+		Assert.assertEquals(b, sorter.shapes.get(1));
+		Assert.assertEquals(c, sorter.shapes.get(2));
+		Assert.assertEquals(d, sorter.shapes.get(3));
 	}
 
 	/**
@@ -61,6 +87,19 @@ public class ShapeSorterTest
 	public void SortShapesPerimeterTest()
 	{
 		// TODO: complete this...
+		ShapeSorter sorter = new ShapeSorter();
+
+		Shape a = new Trapezoid("test", 3, 3, 3, 3);
+		Shape b = new EquilateralTriangle("test2", 4);
+		Shape c = new Ellipse("test3", 3, 6);
+		Shape d = new Circle("test4", 1.5);
+
+		sorter.sortShapes(new ShapePerimeterComparator());
+
+		Assert.assertEquals(a, sorter.shapes.get(0));
+		Assert.assertEquals(b, sorter.shapes.get(1));
+		Assert.assertEquals(c, sorter.shapes.get(2));
+		Assert.assertEquals(d, sorter.shapes.get(3));
 	}
 
 	/**
@@ -70,5 +109,6 @@ public class ShapeSorterTest
 	public void ToStringTest()
 	{
 		// TODO: complete this...
+		
 	}
 }
