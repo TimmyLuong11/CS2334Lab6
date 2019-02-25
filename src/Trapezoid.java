@@ -28,6 +28,12 @@ public class Trapezoid extends Polygon
 	public Trapezoid(String id, double leftSide, double rightSide, double topBase, double bottomBase)
 	{
 		// TODO: complete this...
+		super(id);
+		this.leftSide = leftSide;
+		this.rightSide = rightSide;
+		this.topBase = topBase;
+		this.bottomBase = bottomBase;
+		
 	}
 
 	/**
@@ -39,7 +45,7 @@ public class Trapezoid extends Polygon
 	 * @return Area of the trapezoid.
 	 */
 	@Override
-	public double getPerimeter()
+	public double getArea()
 	{
 		// Use shorter variables names for sake of simplicty:
 		double a = this.bottomBase;
@@ -65,6 +71,7 @@ public class Trapezoid extends Polygon
 	public String getShapeType()
 	{
 		// TODO: complete this...
+		return "Trapezoid";
 	}
 
 }
