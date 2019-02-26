@@ -3,12 +3,13 @@ public class Rectangle extends Polygon
 {
 	private double height, width;
 	
-	public Rectangle(String id, double heigth, double width) 
+	public Rectangle(String id, double height, double width) 
 	{
 		super(id);
-		// TODO Auto-generated constructor stub
 		this.height = height;
 		this.width = width;
+		sideLengths.add(height);
+		sideLengths.add(width);
 	}
 
 	@Override

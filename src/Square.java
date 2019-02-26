@@ -1,16 +1,14 @@
 
 public class Square extends Rectangle 
 {
-	public Square(String id, double width)
+	public Square(String id, double length)
 	{
-		super(id, width, width);
-		// TODO Auto-generated constructor stub
+		super(id, length, length);
 	}
 	
 	@Override
 	public String getShapeType() 
 	{
-		// TODO Auto-generated method stub
 		return "Square";
 	}
 }
