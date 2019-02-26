@@ -34,7 +34,7 @@ public class ShapeTest
 	public void RectangleTest()
 	{
 		// TODO: complete this...
-		Shape rect = new Rectangle("Rectangle1", 3.0);
+		Shape rect = new Rectangle("Rectangle1", 3.0, 3.0);
 		Assert.assertEquals("Rectangle area incorrect.", 9.0, rect.getArea(), 0.0001);
 		Assert.assertEquals("Rectangle perimeter incorrect.", 12.0, rect.getPerimeter(), 0.0001);
 		Assert.assertEquals("Rectangle type incorrect.", "Rectangle", rect.getShapeType());
@@ -113,6 +113,7 @@ public class ShapeTest
 	public void ShapeToStringTest()
 	{
 		// TODO: complete this...
+		
 	}
 
 	//==================================================================================================================
@@ -150,7 +151,24 @@ public class ShapeTest
 	@Test
 	public void ComparePerimeterTest()
 	{
-		// TODO: complete this...
+	    // Test equals:
+		Shape rect = new Rectangle("R1", 3.0,3.0);
+		Shape sqr = new Square("S1", 3.0);
+		ShapePerimeterComparator sc = new ShapePerimeterComparator();
+		Assert.assertEquals("ShapePerimeterComparator should find shapes equal.", 0, sc.compare(rect, sqr));
+		Assert.assertTrue("ShapePerimeterComparator should find shapes equal.", sc.equals(rect, sqr));
+
+		// Test equal perimeter, different area:
+        Shape rect2 = new Rectangle("R2", 1.0, 9.0);
+        Shape sqr2 = new Square("S2", 5.0);
+        Assert.assertEquals("ShapePerimeterComparator gave incorrect ordering.", -1, sc.compare(rect2, sqr2));
+        Assert.assertEquals("ShapePerimeterComparator gave incorrect ordering.", 1, sc.compare(sqr2, rect2));
+        Assert.assertFalse("ShapePerimeterComparator incorrectly finds shapes equal.", sc.equals(rect2, sqr2));
+
+        // Test unequal perimeter and area:
+        Assert.assertEquals("ShapePerimeterComparator gave incorrect ordering.", 1, sc.compare(sqr2, rect));
+        Assert.assertEquals("ShapePerimeterComparator gave incorrect ordering.", -1, sc.compare(rect, sqr2));
+        Assert.assertFalse("ShapePerimeterComparator incorrectly finds shapes equal.", sc.equals(sqr2, rect));
 	}
 
 	/**
@@ -160,5 +178,6 @@ public class ShapeTest
     public void NaturalCompareTest()
     {
 		// TODO: complete this...
+		
     }
 }
