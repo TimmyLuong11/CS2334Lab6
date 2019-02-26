@@ -9,7 +9,9 @@ public class Rectangle extends Polygon
 		this.height = height;
 		this.width = width;
 		sideLengths.add(height);
-		sideLengths.add(width);
+		sideLengths.add(width); 
+		sideLengths.add(height);
+		sideLengths.add(width); 
 	}
 
 	@Override

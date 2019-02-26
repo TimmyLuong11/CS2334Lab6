@@ -50,11 +50,16 @@ public class ShapeSorterTest
 		Shape c = new Ellipse("test3", 3, 6);
 		Shape d = new Circle("test4", 1.5);
 
+		sorter.addShape(a);
+		sorter.addShape(b);
+		sorter.addShape(c);
+		sorter.addShape(d);
+		
 		sorter.sortShapes();
 
 		Assert.assertEquals(a, sorter.shapes.get(0));
 		Assert.assertEquals(b, sorter.shapes.get(1));
-		Assert.assertEquals(c, sorter.shapes.get(2));
+		Assert.assertEquals(c, sorter.shapes.get(2)); 
 		Assert.assertEquals(d, sorter.shapes.get(3));
 	}
 
@@ -72,6 +77,10 @@ public class ShapeSorterTest
 		Shape c = new Ellipse("test3", 3, 6);
 		Shape d = new Circle("test4", 1.5);
 
+		sorter.addShape(a);
+		sorter.addShape(b);
+		sorter.addShape(c);
+		sorter.addShape(d);
 		sorter.sortShapes(new ShapeAreaComparator());
 
 		Assert.assertEquals(a, sorter.shapes.get(0));
@@ -94,6 +103,10 @@ public class ShapeSorterTest
 		Shape c = new Ellipse("test3", 3, 6);
 		Shape d = new Circle("test4", 1.5);
 
+		sorter.addShape(a);
+		sorter.addShape(b);
+		sorter.addShape(c);
+		sorter.addShape(d);
 		sorter.sortShapes(new ShapePerimeterComparator());
 
 		Assert.assertEquals(a, sorter.shapes.get(0));
@@ -109,6 +122,13 @@ public class ShapeSorterTest
 	public void ToStringTest()
 	{
 		// TODO: complete this...
+		ShapeSorter sorter = new ShapeSorter();
+		Shape a = new Square("A", 3.0);
+		Shape b = new Rectangle("B", 3.0, 3.0);
 		
+		sorter.addShape(a);
+		sorter.addShape(b);
+		
+		Assert.assertEquals("[<<Square>>	 ID = <<A>>	 area = <<9.000>>	 perimeter = <<6.000>>, <<Rectangle>>	 ID = <<B>>	 area = <<9.000>>	 perimeter = <<6.000>>]", sorter.toString());
 	}
 }
