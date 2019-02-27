@@ -105,7 +105,7 @@ public abstract class Shape implements Comparable<Shape>
 		{
 			result = -1;
 		}
-		else if(this.getArea() == s.getArea())
+		else
 		{
 			if(this.getPerimeter() > s.getPerimeter())
 			{

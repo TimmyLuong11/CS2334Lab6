@@ -38,13 +38,13 @@ public class ShapePerimeterComparator implements Comparator<Shape>
 		{
 			result = -1;
 		}
-		if(s1.getPerimeter() > s2.getPerimeter())
+		else if(s1.getPerimeter() > s2.getPerimeter())
 		{
 			result = 1;
 		}
 		else
 		{
-			return 0;
+			result =  0;
 		}
 		return result;
 	}
