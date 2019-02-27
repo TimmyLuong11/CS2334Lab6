@@ -1,5 +1,3 @@
-import java.text.DecimalFormat;
-
 /**
  * Lab 6
  *
@@ -40,7 +38,7 @@ public class EquilateralTriangle extends Polygon
 	public double getArea()
 	{
 		// TODO: complete this...
-		return Math.round(sideLength*sideLength*Math.sqrt(3)/4);
+		return sideLength*sideLength*Math.sqrt(3)/4;
 	}
 
 	/**

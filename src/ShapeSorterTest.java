@@ -20,9 +20,9 @@ public class ShapeSorterTest
 	{
 		ShapeSorter sorter = new ShapeSorter();
 
-		Shape a = new Trapezoid("test", 3, 3, 3, 3);
+		Shape a = new Rectangle("test", 3, 3);
 		Shape b = new EquilateralTriangle("test2", 4);
-		Shape c = new Ellipse("test3", 3, 6);
+		Shape c = new Square("test3", 3);
 		Shape d = new Circle("test4", 1.5);
 
 		sorter.addShape(a);
@@ -45,9 +45,9 @@ public class ShapeSorterTest
 		// TODO: complete this...
 		ShapeSorter sorter = new ShapeSorter();
 
-		Shape a = new Trapezoid("test", 3, 3, 3, 3);
+		Shape a = new Rectangle("test", 3, 3);
 		Shape b = new EquilateralTriangle("test2", 4);
-		Shape c = new Ellipse("test3", 3, 6);
+		Shape c = new Square("test3", 3);
 		Shape d = new Circle("test4", 1.5);
 
 		sorter.addShape(a);
@@ -57,10 +57,10 @@ public class ShapeSorterTest
 		
 		sorter.sortShapes();
 
-		Assert.assertEquals(a, sorter.shapes.get(0));
-		Assert.assertEquals(b, sorter.shapes.get(1));
-		Assert.assertEquals(c, sorter.shapes.get(2)); 
-		Assert.assertEquals(d, sorter.shapes.get(3));
+		Assert.assertEquals(b, sorter.shapes.get(0));
+		Assert.assertEquals(d, sorter.shapes.get(1));
+		Assert.assertEquals(a, sorter.shapes.get(2)); 
+		Assert.assertEquals(c, sorter.shapes.get(3));
 	}
 
 	/**
@@ -72,9 +72,9 @@ public class ShapeSorterTest
 		// TODO: complete this...
 		ShapeSorter sorter = new ShapeSorter();
 
-		Shape a = new Trapezoid("test", 3, 3, 3, 3);
+		Shape a = new Rectangle("test", 3, 3);
 		Shape b = new EquilateralTriangle("test2", 4);
-		Shape c = new Ellipse("test3", 3, 6);
+		Shape c = new Square("test3", 3);
 		Shape d = new Circle("test4", 1.5);
 
 		sorter.addShape(a);
@@ -84,9 +84,9 @@ public class ShapeSorterTest
 		sorter.sortShapes(new ShapeAreaComparator());
 
 		Assert.assertEquals(a, sorter.shapes.get(0));
-		Assert.assertEquals(b, sorter.shapes.get(1));
-		Assert.assertEquals(c, sorter.shapes.get(2));
-		Assert.assertEquals(d, sorter.shapes.get(3));
+		Assert.assertEquals(c, sorter.shapes.get(1));
+		Assert.assertEquals(d, sorter.shapes.get(2));
+		Assert.assertEquals(b, sorter.shapes.get(3));
 	}
 
 	/**
@@ -98,9 +98,9 @@ public class ShapeSorterTest
 		// TODO: complete this...
 		ShapeSorter sorter = new ShapeSorter();
 
-		Shape a = new Trapezoid("test", 3, 3, 3, 3);
+		Shape a = new Rectangle("test", 3, 3);
 		Shape b = new EquilateralTriangle("test2", 4);
-		Shape c = new Ellipse("test3", 3, 6);
+		Shape c = new Square("test3", 3);
 		Shape d = new Circle("test4", 1.5);
 
 		sorter.addShape(a);
@@ -129,6 +129,6 @@ public class ShapeSorterTest
 		sorter.addShape(a);
 		sorter.addShape(b);
 		
-		Assert.assertEquals("[<<Square>>	 ID = <<A>>	 area = <<9.000>>	 perimeter = <<6.000>>, <<Rectangle>>	 ID = <<B>>	 area = <<9.000>>	 perimeter = <<6.000>>]", sorter.toString());
+		Assert.assertEquals("[Square:	 ID = A	 area = 9.000	 perimeter = 12.000, Rectangle:	 ID = B	 area = 9.000	 perimeter = 12.000]", sorter.toString());
 	}
 }
